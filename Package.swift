@@ -16,7 +16,7 @@ let package = Package(
     ],
     targets: [
         .target(name: "BNDProtocolProxyBase"),
-        .target(name: "BondDynamic", dependencies: ["BNDProtocolProxyBase", "ReactiveKitDynamic", "Differ"], path: "Sources/Bond"),
+        .target(name: "BondDynamic", dependencies: ["BNDProtocolProxyBase", "ReactiveKitDynamic", "Differ"]),
         .target(name: "Bond", dependencies: ["BNDProtocolProxyBase", "ReactiveKit", "Differ"]),
         .testTarget(name: "BondTests", dependencies: ["Bond", "ReactiveKit"])
     ]
