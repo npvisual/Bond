@@ -7,7 +7,7 @@ let package = Package(
         .macOS(.v10_11), .iOS(.v9), .tvOS(.v9)
     ],
     products: [
-        .library(name: "Bond", targets: ["Bond"])
+        .library(name: "Bond", targets: ["Bond"]),
         .library(name: "BondDynammic", type: .dynamic, targets: ["Bond"])
     ],
     dependencies: [
