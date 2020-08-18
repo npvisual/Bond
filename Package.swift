@@ -7,7 +7,8 @@ let package = Package(
         .macOS(.v10_11), .iOS(.v9), .tvOS(.v9)
     ],
     products: [
-        .library(name: "Bond", type: .dynamic, targets: ["Bond"])
+        .library(name: "Bond", targets: ["Bond"])
+        .library(name: "BondDynammic", type: .dynamic, targets: ["Bond"])
     ],
     dependencies: [
         .package(url: "https://github.com/DeclarativeHub/ReactiveKit.git", .upToNextMajor(from: "3.14.2")),
