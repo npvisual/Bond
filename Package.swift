@@ -8,7 +8,8 @@ let package = Package(
     ],
     products: [
         .library(name: "Bond", targets: ["Bond"]),
-        .library(name: "BondDynammic", type: .dynamic, targets: ["Bond"])
+        .library(name: "BondStatic", type: .static, targets: ["Bond"],
+        .library(name: "BondDynamic", type: .dynamic, targets: ["Bond"])
     ],
     dependencies: [
         .package(url: "https://github.com/DeclarativeHub/ReactiveKit.git", .upToNextMajor(from: "3.14.2")),
