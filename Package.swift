@@ -7,7 +7,7 @@ let package = Package(
         .macOS(.v10_11), .iOS(.v9), .tvOS(.v9)
     ],
     products: [
-        .library(name: "Bond", type: .dynamic, targets: ["Bond"])
+        .library(name: "BondDynamic", type: .dynamic, targets: ["Bond"])
     ],
     dependencies: [
         .package(url: "https://github.com/npvisual/ReactiveKit.git", .branch("fix/spm-dynamic")),
