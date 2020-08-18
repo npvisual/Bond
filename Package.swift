@@ -7,9 +7,8 @@ let package = Package(
         .macOS(.v10_11), .iOS(.v9), .tvOS(.v9)
     ],
     products: [
-        .library(name: "BondDynamic", type: .dynamic, targets: ["BondDynamic"])
-//         ,
-//         .library(name: "Bond", targets: ["Bond"])
+        .library(name: "BondDynamic", type: .dynamic, targets: ["Bond"]),
+        .library(name: "Bond", targets: ["Bond"])
     ],
     dependencies: [
         .package(url: "https://github.com/npvisual/ReactiveKit.git", .branch("fix/spm-dynamic")),
@@ -17,8 +16,7 @@ let package = Package(
     ],
     targets: [
         .target(name: "BNDProtocolProxyBase"),
-        .target(name: "BondDynamic", dependencies: ["BNDProtocolProxyBase", "ReactiveKitDynamic", "Differ"], path: "Sources/Bond"),
-//         .target(name: "Bond", dependencies: ["BNDProtocolProxyBase", "ReactiveKit", "Differ"]),
+        .target(name: "Bond", dependencies: ["BNDProtocolProxyBase", "ReactiveKitDynamic", "Differ"]),
         .testTarget(name: "BondTests", dependencies: ["Bond", "ReactiveKit"])
     ]
 )
