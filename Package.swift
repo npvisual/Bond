@@ -8,7 +8,7 @@ let package = Package(
     ],
     products: [
         .library(name: "Bond", targets: ["Bond"]),
-        .library(name: "BondStatic", type: .static, targets: ["Bond"],
+        .library(name: "BondStatic", type: .static, targets: ["Bond"]),
         .library(name: "BondDynamic", type: .dynamic, targets: ["Bond"])
     ],
     dependencies: [
