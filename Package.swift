@@ -12,12 +12,14 @@ let package = Package(
         .library(name: "BondDynamic", type: .dynamic, targets: ["Bond"])
     ],
     dependencies: [
-        .package(url: "https://github.com/DeclarativeHub/ReactiveKit.git", .upToNextMajor(from: "3.14.2")),
+        .package(url: "https://github.com/npvisual/ReactiveKit.git", .upToNextMajor(from: "3.14.2")),
         .package(url: "https://github.com/tonyarnold/Differ.git", .upToNextMajor(from: "1.4.3"))
     ],
     targets: [
         .target(name: "BNDProtocolProxyBase"),
         .target(name: "Bond", dependencies: ["BNDProtocolProxyBase", "ReactiveKit", "Differ"]),
+        .target(name: "BondStatic", dependencies: ["BNDProtocolProxyBase", "ReactiveKitStatic", "Differ"]),
+        .target(name: "BondDynamic", dependencies: ["BNDProtocolProxyBase", "ReactiveKitDynamic", "Differ"]),
         .testTarget(name: "BondTests", dependencies: ["Bond", "ReactiveKit"])
     ]
 )
