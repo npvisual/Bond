@@ -12,7 +12,7 @@ let package = Package(
         .library(name: "BondDynamic", type: .dynamic, targets: ["Bond"])
     ],
     dependencies: [
-        .package(url: "https://github.com/npvisual/ReactiveKit.git", .branch("fix/spm-multilibs"),
+        .package(url: "https://github.com/npvisual/ReactiveKit.git", .branch("fix/spm-multilibs")),
         .package(url: "https://github.com/tonyarnold/Differ.git", .upToNextMajor(from: "1.4.3"))
     ],
     targets: [
